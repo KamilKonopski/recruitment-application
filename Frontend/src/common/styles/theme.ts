@@ -5,7 +5,9 @@ export const theme: DefaultTheme = {
     primary: "#4F46E5",
     primaryHover: "#4338CA",
     secondary: "#D946EF",
+    secondaryHover: "#C026D3",
     background: "#F9FAFB",
+    backgroundAlt: "#1E293B",
     card: "#FFFFFF",
     border: "#E5E7EB",
 
