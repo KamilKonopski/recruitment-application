@@ -7,7 +7,7 @@ declare module "styled-components" {
       primaryHover: "#4338CA";
       secondary: "#D946EF";
       secondaryHover: "#C026D3";
-      background: "#F9FAFB";
+      background: "#E5E7EB";
       backgroundAlt: "#1E293B";
       card: "#FFFFFF";
       border: "#E5E7EB";
