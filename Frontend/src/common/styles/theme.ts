@@ -9,7 +9,7 @@ export const theme: DefaultTheme = {
     background: "#E5E7EB",
     backgroundAlt: "#1E293B",
     card: "#FFFFFF",
-    border: "#E5E7EB",
+    border: "#C8C9CC",
 
     text: "#111827",
     textMuted: "#6B7280",
