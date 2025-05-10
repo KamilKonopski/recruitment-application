@@ -29,4 +29,8 @@ export const ButtonStyled = styled.button<ButtonProps>`
     background-color: ${(props) =>
       props.light ? theme.colors.hoverLight : theme.colors.hoverDark};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
