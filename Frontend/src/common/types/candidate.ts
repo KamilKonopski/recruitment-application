@@ -1,9 +1,9 @@
-export type ActionsType = "Zmień status" | "Wyślij e-mail";
+export type ActionsType = "change" | "send";
 
 export type StatusType = "delivered" | "rejected" | "invited";
 
 export interface ICandidate {
-  id: number;
+  id: string;
   fullName: string;
   position: string;
   status: StatusType;
