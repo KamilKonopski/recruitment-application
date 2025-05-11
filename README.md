@@ -11,6 +11,7 @@ Prosty frontendowy prototyp aplikacji do zarządzania kandydatami. Umożliwia do
 - Vite
 - Styled Components
 - LocalStorage
+- Express + SendGrid
 
 ---
 
@@ -20,6 +21,7 @@ Prosty frontendowy prototyp aplikacji do zarządzania kandydatami. Umożliwia do
 - Dodawanie nowego kandydata przez formularz
 - Zmiana statusu aplikacji (np. „odrzucony”, „zaproszenie na rozmowę”)
 - Dane przechowywane w LocalStorage
+- Wysyłanie emaila z informacją o odrzuceniu lub zaproszeniu na rozmowę kandydata
 
 ---
 
@@ -28,3 +30,4 @@ Prosty frontendowy prototyp aplikacji do zarządzania kandydatami. Umożliwia do
 ```bash
 npm install
 npm run dev
+```
