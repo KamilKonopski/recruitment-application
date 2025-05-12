@@ -57,18 +57,15 @@ Adresu e-mail docelowego, który wpiszesz w body.to
 🔐 Zmienna środowiskowa
 W pliku .env w folderze backend dodaj:
 
-ini
-Kopiuj
-Edytuj
 SENDGRID_API_KEY=twój_api_key
 EMAIL_FROM=twój_zarejestrowany_email@domena.com
+
 📨 Przykładowe zapytanie z frontendu
-ts
-Kopiuj
-Edytuj
+
 body: JSON.stringify({
 to: "kandydat@example.com", // <— wpisz tu swój adres e-mail
 subject: "Dziękujemy za aplikację",
 message: "Twoje zgłoszenie zostało odebrane.",
 });
+
 ⚠️ Uwaga: nie wysyłamy maili do losowych adresów wprowadzonych przez użytkownika — to tylko symulacja! Podajesz swój e-mail, by nie spamować nieistniejących lub cudzych skrzynek.
