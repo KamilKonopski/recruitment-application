@@ -21,4 +21,5 @@ export interface CandidatesContextType {
   setCandidates: React.Dispatch<React.SetStateAction<ICandidatesBoard>>;
   moveToColumn: (target: keyof ICandidatesBoard, candidate: ICandidate) => void;
   addNewCandidate: (newCandidate: ICandidate) => void;
+  sendEmail: (subject: string, message: string) => void;
 }
