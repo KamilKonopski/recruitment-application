@@ -20,4 +20,5 @@ export interface CandidatesContextType {
   candidates: ICandidatesBoard;
   setCandidates: React.Dispatch<React.SetStateAction<ICandidatesBoard>>;
   moveToColumn: (target: keyof ICandidatesBoard, candidate: ICandidate) => void;
+  addNewCandidate: (newCandidate: ICandidate) => void;
 }
