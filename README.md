@@ -25,10 +25,12 @@ Prosty projekt frontendowy do zarządzania kandydatami w procesie rekrutacji. Ka
 
 ### Frontend
 
-````bash
+```bash
 cd frontend
 npm install
 npm run dev
+
+```
 
 ### Backend
 
@@ -36,6 +38,8 @@ npm run dev
 cd backend
 npm install
 npm run dev
+
+```
 
 ✅ Backend dostępny domyślnie pod http://localhost:3000
 
@@ -63,9 +67,8 @@ ts
 Kopiuj
 Edytuj
 body: JSON.stringify({
-  to: "kandydat@example.com", // <— wpisz tu swój adres e-mail
-  subject: "Dziękujemy za aplikację",
-  message: "Twoje zgłoszenie zostało odebrane.",
+to: "kandydat@example.com", // <— wpisz tu swój adres e-mail
+subject: "Dziękujemy za aplikację",
+message: "Twoje zgłoszenie zostało odebrane.",
 });
 ⚠️ Uwaga: nie wysyłamy maili do losowych adresów wprowadzonych przez użytkownika — to tylko symulacja! Podajesz swój e-mail, by nie spamować nieistniejących lub cudzych skrzynek.
-````
