@@ -90,9 +90,19 @@ export const CandidatesProvider = ({
     });
   };
 
+  const addNewCandidate = (newCandidate: ICandidate) => {
+    setCandidates((prev) => ({
+      ...prev,
+      application: {
+        ...prev.application,
+        candidates: [...prev.application.candidates, newCandidate],
+      },
+    }));
+  };
+
   return (
     <CandidatesContext.Provider
-      value={{ candidates, setCandidates, moveToColumn }}
+      value={{ candidates, setCandidates, moveToColumn, addNewCandidate }}
     >
       {children}
     </CandidatesContext.Provider>
