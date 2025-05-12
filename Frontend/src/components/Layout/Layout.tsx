@@ -1,12 +1,21 @@
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import CandidatesBoard from "../Candidates/CandidatesBoard/CandidatesBoard";
+import { CandidatesProvider } from "../../common/providers/CandidatesProvider";
 
-import { LayoutWrapper } from "./Layout.styled";
+import { LayoutWrapper, MainWrapper } from "./Layout.styled";
 
 const Layout = () => {
   return (
-    <LayoutWrapper>
-      <Header />
-    </LayoutWrapper>
+    <CandidatesProvider>
+      <LayoutWrapper>
+        <Header />
+        <MainWrapper>
+          <CandidatesBoard />
+        </MainWrapper>
+        <Footer />
+      </LayoutWrapper>
+    </CandidatesProvider>
   );
 };
 
