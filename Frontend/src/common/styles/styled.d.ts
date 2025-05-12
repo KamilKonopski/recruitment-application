@@ -25,6 +25,10 @@ declare module "styled-components" {
 
       success: "#10B981";
       danger: "#EF4444";
+
+      application: "#4F46E5";
+      interview: "#3B82F6";
+      rejected: "#EF4444";
     };
     fonts: {
       base: string;
