@@ -1,33 +1,71 @@
 # 🧑‍💼 Aplikacja Rekrutacyjna
 
-Prosty frontendowy prototyp aplikacji do zarządzania kandydatami. Umożliwia dodawanie kandydatów, zmianę statusu i przechowuje dane lokalnie w przeglądarce.
+Prosty projekt frontendowy do zarządzania kandydatami w procesie rekrutacji. Kandydaci są sortowani w 3 kolumny: „Nowi”, „Zaproszeni”, „Odrzuceni”.
 
 ---
 
-## ⚙️ Technologie
+## 🚀 Technologie
 
-- React
+- React + Vite
 - TypeScript
-- Vite
 - Styled Components
-- LocalStorage
-- Express + SendGrid
+- SendGrid (backend – Node.js)
 
 ---
 
-## ✅ Funkcje
+## ⚙️ Funkcje
 
-- Lista kandydatów (imię, e-mail, stanowisko, status)
-- Dodawanie nowego kandydata przez formularz
-- Zmiana statusu aplikacji (np. „odrzucony”, „zaproszenie na rozmowę”)
-- Dane przechowywane w LocalStorage
-- Wysyłanie emaila z informacją o odrzuceniu lub zaproszeniu na rozmowę kandydata
+- Dodawanie kandydatów do różnych kolumn
+- Przenoszenie kandydatów między kolumnami
+- Wysyłanie maila z backendu (np. „Dziękujemy za aplikację”)
 
 ---
 
-## ▶️ Uruchomienie
+## 🖥️ Uruchamianie aplikacji
 
-```bash
+### Frontend
+
+````bash
+cd frontend
 npm install
 npm run dev
-```
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+
+✅ Backend dostępny domyślnie pod http://localhost:3000
+
+📧 Konfiguracja SendGrid
+Aby backend działał i wysyłał maile, potrzebujesz:
+
+Konta na SendGrid
+
+Wygenerowanego API Keya
+
+Zweryfikowanego adresu e-mail, z którego będą wysyłane wiadomości
+
+Adresu e-mail docelowego, który wpiszesz w body.to
+
+🔐 Zmienna środowiskowa
+W pliku .env w folderze backend dodaj:
+
+ini
+Kopiuj
+Edytuj
+SENDGRID_API_KEY=twój_api_key
+EMAIL_FROM=twój_zarejestrowany_email@domena.com
+📨 Przykładowe zapytanie z frontendu
+ts
+Kopiuj
+Edytuj
+body: JSON.stringify({
+  to: "kandydat@example.com", // <— wpisz tu swój adres e-mail
+  subject: "Dziękujemy za aplikację",
+  message: "Twoje zgłoszenie zostało odebrane.",
+});
+⚠️ Uwaga: nie wysyłamy maili do losowych adresów wprowadzonych przez użytkownika — to tylko symulacja! Podajesz swój e-mail, by nie spamować nieistniejących lub cudzych skrzynek.
+````
